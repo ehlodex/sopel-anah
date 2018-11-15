@@ -11,6 +11,13 @@ https://sopel.chat
 import sopel.module
 anah_version = '0.319.1100'
 
+# Meeting Times
+## STATIC - Not yet converted
+days = {
+    "en": {"Sundays": ["10:00 am","11:15 am","7:00 pm"], "Wednesdays": ["7:00 pm"]},
+    "es": {"Domingos": ["10:00 am","11:15 am","7:00 pm"], "Miercoles": ["7:00 pm"]}
+}
+
 @sopel.module.commands('anah')
 def modver(bot, trigger):
     bot.reply('The main anah module is at version ' + anah_version)
