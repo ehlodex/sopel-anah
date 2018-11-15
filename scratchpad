@@ -1,0 +1,5 @@
+# General Sopel Database Commands
+#     https://sopel.chat/docs/db.html
+
+# Set a per-nickname preference
+#     bot.db.set_nick_value(trigger.nick, 'lang', 'en_US')
