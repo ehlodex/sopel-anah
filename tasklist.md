@@ -1,5 +1,5 @@
 - [ ] Create anah.py module with basic functionality
-    - [ ] static meeting times
+    - [x] static meeting times
     - [ ] basic contact information (phone, address, email)
     - [ ] multilingual support
   
