@@ -13,7 +13,7 @@ anah_version = '0.319.1100'
 
 # Meeting Times
 ## STATIC - Not yet converted
-days = {
+services = {
     "en": {"Sundays": ["10:00 am","11:15 am","7:00 pm"], "Wednesdays": ["7:00 pm"]},
     "es": {"Domingos": ["10:00 am","11:15 am","7:00 pm"], "Miercoles": ["7:00 pm"]}
 }
@@ -22,12 +22,34 @@ days = {
 def modver(bot, trigger):
     bot.reply('The main anah module is at version ' + anah_version)
 
-#Convert static data into dynamic
-
 @sopel.module.rule('.*(time.*(service|meeting))|((service|meeting).*time).*')
 def hours_en(bot, trigger):
-    bot.say('Sundays at 10:00a, 11:15a, and 7:00p. Wednesdays at 7:00p.')
+    # you can add a message prefix here
+    services_msg = ""
+    days = services["en"]
+    for day in days:
+        if len(days[day]) == 1:
+            day_msg = day + " at " + days[day][0]
+        elif len(days[day]) == 2:
+            day_msg = day + " at " + days[day][0] + " and " + days[day][1]
+        else:
+            day_msg = day + " at " + ', '.join(days[day][0:-1]) + ", and " + days[day][-1]
+        day_msg = day_msg + ". "
+        services_msg = services_msg +  day_msg
+    bot.say(services_msg)
 
 @sopel.module.rule('.*(hora.*(servicio|reunion))|((servicio|reunion).*hora).*')
-def horas_es(bot, trigger):
-    bot.say('Domingos a las 10:00a, 11:15a, y 7:00p. Miercoles a las 7:00p.')
+def hours_en(bot, trigger):
+    # you can add a message prefix here
+    services_msg = ""
+    days = services["es"]
+    for day in days:
+        if len(days[day]) == 1:
+            day_msg = day + " at " + days[day][0]
+        elif len(days[day]) == 2:
+            day_msg = day + " at " + days[day][0] + " and " + days[day][1]
+        else:
+            day_msg = day + " at " + ', '.join(days[day][0:-1]) + ", and " + days[day][-1]
+        day_msg = day_msg + ". "
+        services_msg = services_msg +  day_msg
+    bot.say(services_msg)
