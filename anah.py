@@ -1,6 +1,6 @@
 """
 anah.py - Sopel Additions for Churches
-Copyright © 2018, Joshua Burkholder
+Copyright © 2018, Joshua Burkholder, Calvary Bible Church
 Licensed under the MIT License
 """
 
@@ -13,6 +13,9 @@ class language_data:
     greeting = ""
     conjunction = ""
     meetings = {}
+    addressbook = {}
+    phonebook = {}
+    emailbook = {}
 
 language_pack = {
     "en": language_data(),
@@ -24,18 +27,40 @@ language_pack["en"].name = "English"
 language_pack["en"].greeting = "Hello"
 language_pack["en"].conjunction = "and"
 language_pack["en"].meetings = {
-        "Sundays at": ["10:00 am","11:15 am","7:00 pm"],
-        "Wednesdays at": ["7:00 pm"]
-        }
+    "Sundays at": ["10:00 am","11:15 am","7:00 pm"],
+    "Wednesdays at": ["7:00 pm"]
+    }
+language_pack["en"].addressbook = {
+    "Mailing Address": "P.O. Box 131, Wilkes-Barre, PA 18704",
+    "Physical Address": "186 Sambourne Street, Wilkes-Barre, PA 18704"
+    }
+language_pack["en"].phonebook = {
+    "Office": "570-824-5868"
+    }
+language_pack["en"].emailbook = {
+    "Office": "church@calvarybiblewb.org",
+    "Pastor": "pastor@calvarybiblewb.org"
+    }
 
 ## Español
 language_pack["es"].name = "Español"
 language_pack["es"].greeting = "Hola"
 language_pack["es"].conjunction = "y"
 language_pack["es"].meetings = {
-        "Domingos a las": ["10:00 am","11:15 am","7:00 pm"],
-        "Miercoles a las": ["7:00 pm"]
-        }
+    "Domingos a las": ["10:00 am","11:15 am","7:00 pm"],
+    "Miercoles a las": ["7:00 pm"]
+    }
+language_pack["es"].addressbook = {
+    "Mailing Address": "P.O. Box 131, Wilkes-Barre, PA 18704",
+    "Physical Address": "186 Sambourne Street, Wilkes-Barre, PA 18704"
+    }
+language_pack["es"].phonebook = {
+    "Office": "570-824-5868"
+    }
+language_pack["es"].emailbook = {
+    "Office": "iglesia@calvarybiblewb.org",
+    "Pastor": "pastor@calvarybiblewb.org"
+    }
 
 def get_meetings(lang):
     meetings = language_pack[lang].meetings
