@@ -1,5 +1,12 @@
+"""
+anah.py - Sopel Additions for Churches
+Copyright © 2018, Joshua Burkholder
+Licensed under the MIT License
+"""
+
+# sure...I could do all this statically, but where's the fun in that? :-P
 from sopel import module
-anah_version = "0.320.1331"
+anah_version = "0.320.1350"
 
 class language_data:
     name = ""
