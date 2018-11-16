@@ -9,7 +9,7 @@ https://sopel.chat
 """
 
 import sopel.module
-anah_version = '0.319.1100'
+anah_version = '0.319.1950'
 
 # Meeting Times
 ## STATIC - Not yet converted
