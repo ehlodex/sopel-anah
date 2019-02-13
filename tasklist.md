@@ -5,7 +5,6 @@
   
 - [ ] Create beliefs.py module for answering simple questions about general beliefs
     - [ ] core theology (*very* basic)
-    - [ ] who is Jesus
     - [ ] simple explanation of what 'salvation' means
   
 - [ ] Extend functionality of anah.py with events.py
