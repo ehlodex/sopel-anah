@@ -3,3 +3,5 @@
 
 # Set a per-nickname preference
 #     bot.db.set_nick_value(trigger.nick, 'lang', 'en_US')
+
+# Add a database for custom, but static, information
