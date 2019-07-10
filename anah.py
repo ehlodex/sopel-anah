@@ -1,6 +1,6 @@
 """
 anah.py - Sopel Additions for Churches
-Copyright © 2018, Joshua Burkholder
+Copyright © 2019, Joshua Burkholder
 Licensed under the MIT License
 
 Anah (an·ä') is a name that means 'one who answers' in Hebrew (Gen. 36, 1Ch 1)
@@ -11,7 +11,7 @@ from sopel import __version__ as sopel_version
 from datetime import datetime, timedelta
 #anah_updated is future use. This will let people know the data might be old.
 #anah_version is calulated based on the last updated date.
-anah_updated = datetime.strptime('2018-11-19 14:21', '%Y-%m-%d %H:%M')
+anah_updated = datetime.strptime('2019-07-01 14:21', '%Y-%m-%d %H:%M')
 anah_version = '0.{}.{}{}'.format(anah_updated.timetuple().tm_yday, anah_updated.hour, anah_updated.minute)
 
 #this needs to be broken into separate files (one for each language) then imported as language_pack
@@ -113,7 +113,7 @@ def address_en(bot, trigger):
 @module.rule('.*direccion.*')
 def address_es(bot, trigger):
     get_addresses(bot, trigger, 'es')
-    
+
 # add rules for phone numbers and email addresses
 # add rules/commands for groups of similar data (e.g. all 'Office' contact information)
 
